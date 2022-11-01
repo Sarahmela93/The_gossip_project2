@@ -1,0 +1,20 @@
+<h1>The Gossip Project</h1>
+<h2>Welcome <%= params["user"] %> !</h2>
+<h3>The lasts gossips:</h3>
+
+
+<div class="container-fluid d-flex flex-wrap justify-content-center row xy-3">
+    <% @gossips.each do |gossip| %>
+        <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title"><%= gossip.title %></h5>
+            <h6 class="card-subtitle mb-2 text-muted"><%= gossip.user.first_name %></h6>
+            <p class="card-text"><%= gossip.content %></p>
+            <a href="/gossip/<%= gossip.id %>" class="card-link">More details</a>
+            <a href="/author/<%= gossip.user.id %>" class="card-link">Author</a>
+        </div>
+        </div>
+    <%end%>
+</div>
+
+

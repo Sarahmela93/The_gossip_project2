@@ -1,0 +1,8 @@
+ <h1>Gossip detail</h1>
+    <h3>Gossip's page n°<%= params["id"] %></h3>
+
+        <p>
+          Author of gossip : <%= @gossips.user.first_name %><br/>
+          Title of gossip: <%= @gossips.title %><br/>
+          Content of gossip : <%= @gossips.content %><br/>
+        </p>
